@@ -3,18 +3,20 @@ import {
     BOOKLISTLOAD,
     FILTERBOOCKS,
     ONCHANGEPRICEBEFORE,
-    ONCHANGEPRICEFROM,
+    ONCHANGEPRICEFROM, PAGINATION, RESETPAGENUMBER,
     SEARCH
 } from "../Constant/Constant";
 
 
 const initialState = {
     basketTotal: 0,
-    boockList: [],
-    boockListFiler: [],
+    bookList: [],
+    bookListFiler: [],
     inputFrom: '',
     inputBefore: '',
-    category: []
+    category: [],
+    startPage: 0,
+    endPage: 9
 
 }
 
@@ -25,25 +27,25 @@ const reducer = (state = initialState, action) => {
         return {...state, basketTotal: state.basketTotal + action.price}
     }
     if (action.type === BOOKLISTLOAD) {
-        const minprice = action.boocklist.reduce((prev, el) => prev.price > el.price ? el : prev)
-        const maxprice = action.boocklist.reduce((prev, el) => prev.price < el.price ? el : prev)
+        const minPrice = action.booklist.reduce((prev, el) => prev.price > el.price ? el : prev)
+        const maxPrice = action.booklist.reduce((prev, el) => prev.price < el.price ? el : prev)
         return {
             ...state,
-            boockList: [...action.boocklist],
+            bookList: [...action.booklist],
             category: [...action.category],
-            boockListFiler: [...action.boocklist],
-            inputFrom: minprice.price,
-            inputBefore: maxprice.price,
+            bookListFiler: [...action.booklist],
+            inputFrom: minPrice.price,
+            inputBefore: maxPrice.price,
         }
     }
 
     if (action.type === FILTERBOOCKS && action.filter !== state.category[0].name) {
         return {
             ...state,
-            boockListFiler: [...state.boockList.filter((el) => el.category.toString() === action.filter.toString())]
+            bookListFiler: [...state.bookList.filter((el) => el.category.toString() === action.filter.toString())]
         }
     } else if (action.type === FILTERBOOCKS && action.filter === state.category[0].name) {
-        return {...state, boockListFiler: [...state.boockList]}
+        return {...state, bookListFiler: [...state.bookList]}
     }
     if (action.type === ONCHANGEPRICEFROM) {
         return {...state, inputFrom: action.price}
@@ -54,8 +56,14 @@ const reducer = (state = initialState, action) => {
     if (action.type === SEARCH) {
         return {
             ...state,
-            boockListFiler: [...state.boockList.filter((el) => el.price >= state.inputFrom && el.price <= state.inputBefore)]
+            bookListFiler: [...state.bookList.filter((el) => el.price >= state.inputFrom && el.price <= state.inputBefore)]
         }
+    }
+    if(action.type===PAGINATION){
+        return {...state,startPage: action.start,endPage:action.end }
+    }
+    if(action.type === RESETPAGENUMBER){
+        return {...state,startPage: 0,endPage: 9}
     }
     return state
 }

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Filter.css'
 import FilterItem from "./FilterItem/FilterItem";
-import {defaultCategory} from "../../util/BooksLoad";
+import {defaultCategory} from "../../util/BooksLoad/BooksLoad";
 
 
 const Filter = (props) => {
@@ -23,6 +23,8 @@ const Filter = (props) => {
     }
     const search = () => {
         props.search()
+        props.resetPageNumber()
+
     }
 
 
@@ -34,17 +36,20 @@ const Filter = (props) => {
                     <path d="M0 10H18V8H0V10ZM0 14H18V12H0V14ZM0 6H18V4H0V6ZM0 0V2H18V0H0Z" fill="#A4A2A2"/>
                 </svg>
             </div>
-            {isFilter ?
-                <div className='list_filter_items'>
-                    <ul>
-                        {props.category.map((el) => {
-                            return (
-                                <FilterItem setIsFilter={setIsFilter} Filter={Filter} key={el.id} filterName={el.name}/>
-                            )
-                        })}
-                    </ul>
-                </div>
-                : null
+            {isFilter &&
+            <div className='list_filter_items'>
+                <ul>
+                    {props.category.map((el) => {
+                        return (
+                            <FilterItem resetPageNumber={props.resetPageNumber}
+                                        setIsFilter={setIsFilter}
+                                        Filter={Filter} key={el.id}
+                                        filterName={el.name}
+                            />
+                        )
+                    })}
+                </ul>
+            </div>
             }
             <div className='filter_price'>
                 <div>

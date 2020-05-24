@@ -1,9 +1,9 @@
 import {connect} from 'react-redux'
 import Filter from "./Filter";
 import {
-    filterBoocksAction,
+    filterBooksAction,
     onChangePriceBeforeAction,
-    onChangePriceFromAction,
+    onChangePriceFromAction, resetPageNumberAction,
     searchAction
 } from "../../redux/Actions/Actions";
 
@@ -18,10 +18,11 @@ const mapStateToProps = ({inputFrom,inputBefore,category})=>{
 }
 
 const FilterConnect = connect(mapStateToProps,{
-    Filter:filterBoocksAction,
+    Filter:filterBooksAction,
     onChangePriceFrom:onChangePriceFromAction,
     onChangePriceBefore:onChangePriceBeforeAction,
-    search:searchAction
+    search:searchAction,
+    resetPageNumber:resetPageNumberAction
 
 })(Filter)
 export default FilterConnect

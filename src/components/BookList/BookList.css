@@ -1,8 +1,17 @@
-.boock_list {
+.book_list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     justify-items: center;
     padding: 0px 10% 50px 0px;
 
+}
+.page_number{
+    margin-left: 5px;
+    padding: 3px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding-right: 10%;
 }

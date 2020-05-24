@@ -1,24 +1,21 @@
-import React from 'react';
 import {connect} from 'react-redux'
-import {addBasketAction, bookListLoadAction} from "../../redux/Actions/Actions";
+import {addBasketAction, setPageNumberAction} from "../../redux/Actions/Actions";
 import BookList from "./BookList";
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({basketTotal,bookListFiler,startPage,endPage}) => {
     return {
-        basketTotal: state.basketTotal,
-        boockList: state.boockListFiler
-    }
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addToBasket: (price) => {
-            dispatch(addBasketAction(price))
-        },
+        basketTotal:basketTotal,
+        bookList: bookListFiler,
+        startPage:startPage,
+        endPage:endPage
     }
 }
 
-const BookListContainer = connect(mapStateToProps, mapDispatchToProps)(BookList)
+const BookListContainer = connect(mapStateToProps, {
+    addToBasket:addBasketAction,
+    setPageNumber:setPageNumberAction
+})(BookList)
 
 
 export default BookListContainer;

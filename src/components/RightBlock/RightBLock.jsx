@@ -8,10 +8,6 @@ const RightBLock = () => {
         <div className='right_block'>
             <FilterConnect/>
             <BookListContainer/>
-            <div className='wrap2'>
-                <div className='rectangle3'></div>
-            </div>
-
         </div>
     );
 };

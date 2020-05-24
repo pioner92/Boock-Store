@@ -8,7 +8,7 @@ const BookItem = (props) => {
     }
 
     return (
-        <div className='boock_item'>
+        <div className='book_item'>
             <img src={props.img} alt=""/>
             <span>{props.name}</span>
             <span className='author'>Автор: {props.author}</span>

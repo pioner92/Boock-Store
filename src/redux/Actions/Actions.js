@@ -3,7 +3,7 @@ import {
     BOOKLISTLOAD,
     FILTERBOOCKS,
     ONCHANGEPRICEBEFORE,
-    ONCHANGEPRICEFROM,
+    ONCHANGEPRICEFROM, PAGINATION, RESETPAGENUMBER,
     SEARCH
 } from "../Constant/Constant";
 
@@ -13,15 +13,15 @@ export const addBasketAction = (price) => {
         price
     }
 }
-export const bookListLoadAction = (boocklist) => {
+export const bookListLoadAction = (booklist) => {
     return {
         type: BOOKLISTLOAD,
-        boocklist: boocklist.boocks,
-        category: boocklist.category
+        booklist: booklist.books,
+        category: booklist.category
 
     }
 }
-export const filterBoocksAction = (filter) => {
+export const filterBooksAction = (filter) => {
     return {
         type: FILTERBOOCKS,
         filter
@@ -43,5 +43,20 @@ export const onChangePriceBeforeAction = (price) => {
 export const searchAction = () => {
     return {
         type: SEARCH,
+    }
+}
+
+export const setPageNumberAction = (index) => {
+    let end = 9 * (index + 1)
+    let start = end - 9
+    return {
+        type: PAGINATION,
+        start,
+        end
+    }
+}
+export const resetPageNumberAction = ()=>{
+    return {
+        type:RESETPAGENUMBER,
     }
 }
