@@ -1,0 +1,76 @@
+.navigation{
+    height: 600px;
+    border-radius: 5px;
+    width: 200px;
+    padding: 20px 50px;
+
+
+
+}
+
+li{
+    list-style: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+li:hover{
+    transition: .2s;
+    transform: scale(1.03);
+    list-style-type: circle;
+
+}
+.rectangle{
+    position: absolute;
+    z-index: -2;
+    top:100px;
+    height: 600px;
+    width: 500px;
+    background: #FFF7AA;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    box-shadow: 15px 4px 4px rgba(0, 0, 0, 0.12);
+
+}
+.rectangle1{
+    z-index: -1;
+    height: 300px;
+    width: 500px;
+    background: #FFF7AA;
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.12);
+    clip-path: polygon(100% 100%, 0 0, 0 100%);
+}
+.rectangle5{
+    z-index: -1;
+    height: 600px;
+    width: 500px;
+    background: #FFF7AA;
+    position: absolute;
+    bottom: -500px;
+    right: 0;
+    box-shadow: 104px -26px 20px rgba(0, 0, 0, 0.12);
+    clip-path: polygon(100% 100%, 100% 0%, 0% 50%);
+
+}
+
+.rectangle6{
+    z-index: 1;
+    height: 700px;
+    width: 80px;
+    background: #FF7C7C;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    clip-path: polygon(50% 90%, 79% 100%, 97% 0, 0 0, 20% 100%);
+}
+
+
+.wrap{
+
+    z-index: -1;
+    position: absolute;
+    top:-10px;
+    filter: drop-shadow(-1px 6px 5px rgba(50, 50, 0, 0.35));
+}

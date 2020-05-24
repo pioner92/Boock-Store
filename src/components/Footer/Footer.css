@@ -1,0 +1,19 @@
+.footer{
+    background: #3e3e3e;
+    height: 50px;
+    align-self: end;
+}
+.footer span{
+    color: white;
+}
+.rectangle4{
+    z-index: -1;
+    height: 300px;
+    width: 500px;
+    background: #FFF7AA;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-shadow: 30px 30px 4px rgba(0, 0, 0, 0.12);
+    clip-path: polygon(100% 100%, 0 0, 100% 0%);
+}

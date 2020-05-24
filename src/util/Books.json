@@ -1,0 +1,134 @@
+{
+  "boocks": [
+    {
+      "id": 0,
+      "name": "Изучаем Python",
+      "author": "Эрик Мэтиз",
+      "price": 18.00,
+      "category": "Python",
+      "img": "https://media.proglib.io/posts/2020/04/06/e174ffa07a1b73ad9fe2c9ce0669dc74.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Программирование на Python, том II, 4-е издание",
+      "author": "Марк Лутц",
+      "price": 14.00,
+      "category": "Python",
+      "img": "https://www.bookvoed.ru/files/1836/46/14/5.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "JavaScript. Подробное руководство, 6-е издание",
+      "author": "Дэвид Флэнаган",
+      "price": 12.00,
+      "category": "JavaScript",
+      "img": "https://files.books.ru/pic/1814001-1815000/1814274/1600196014c.jpg"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript для детей. Самоучитель по программированию",
+      "author": "Ник Морган",
+      "price": 15.00,
+      "category": "JavaScript",
+      "img": "https://img2.labirint.ru/rcimg/4a50d67413d6c6932144f7c8e0e96a10/960x540/books56/551756/ph_01.jpg?1575462433"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript и jQuery",
+      "author": "Дэвид МакФарланд",
+      "price": 8.00,
+      "category": "JavaScript",
+      "img": "https://images.ua.prom.st/1220802751_w640_h640_kniga-javascript-i.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Java для Чайников",
+      "author": "Барри Берд",
+      "price": 11.00,
+      "category": "Java",
+      "img": "https://cdn1.ozone.ru/multimedia/c650/1005232190.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Java справочник разработчика",
+      "author": "Бенджамин Дж. Эванс, Дэвид Флэнаган",
+      "price": 23.00,
+      "category": "Java",
+      "img": "https://javarush.ru/images/article/25e12b11-b5ec-44d1-82c8-4988ca50bcad/512.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Java эффективное программирование",
+      "author": "Джошуа Блох",
+      "price": 17.00,
+      "category": "Java",
+      "img": "https://javarush.ru/images/article/bf23c313-0f98-4083-aaa1-42e5297b7917/512.webp"
+    },
+    {
+      "id": 8,
+      "name": "Философия Java",
+      "author": "Брюс Эккель",
+      "price": 25.00,
+      "category": "Java",
+      "img": "https://javarush.ru/images/article/da5ff883-1657-4886-a395-3caa9024b4b4/512.webp"
+    },
+    {
+      "id": 9,
+      "name": "C# для начинающих",
+      "author": "Борис Пахомов",
+      "price": 16.00,
+      "category": "C#",
+      "img": "https://padabum.com/pics/187770.jpg"
+    },
+    {
+      "id": 10,
+      "name": "C# для профессионалов",
+      "author": "Джон Скит",
+      "price": 13.00,
+      "category": "C#",
+      "img": "https://techrocks.ru/wp-content/uploads/2019/10/c-sharp-1.jpg"
+    },
+    {
+      "id": 11,
+      "name": "C++ для чайников",
+      "author": "Дэвис Стефан Рэнди",
+      "price": 16.00,
+      "category": "C++",
+      "img": "https://cdn1.ozone.ru/multimedia/c650/1012024090.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Язык программирования C++, 6-е издание",
+      "author": "Стивен Прата",
+      "price": 14.00,
+      "category": "C++",
+      "img": "https://cdn1.ozone.ru/multimedia/c650/1004419770.jpg"
+    }
+  ],
+  "category": [
+    {
+      "id": 0,
+      "name": "Все"
+    },
+    {
+      "id": 1,
+      "name": "Python"
+    },
+    {
+      "id": 2,
+      "name": "JavaScript"
+    },
+    {
+      "id": 3,
+      "name": "Java"
+    },
+    {
+      "id": 4,
+      "name": "C++"
+    },
+    {
+      "id": 5,
+      "name": "C#"
+    }
+  ]
+}
