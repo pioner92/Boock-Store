@@ -1,7 +1,7 @@
 import React from 'react';
 import BasketBookItem from "./BasketBookItem/BasketBookItem";
 import './Basket.css'
-import {removeBasketItemAction} from "../../redux/Actions/Actions";
+
 
 const Basket = (props) => {
     return (
@@ -13,8 +13,17 @@ const Basket = (props) => {
                 )
             })}
             <div className='basket_total_title'>
-                <span >В сумме: {props.basketTotal} $</span>
+                {props.basketTotal>0?
+                    <span >В сумме: {props.basketTotal} $</span>
+               :
+                <span> Корзина пуста</span>
+                }
+                {props.basketTotal>0&&
+                    <span className='basket_pay'>Оплатить</span>
+                }
+
             </div>
+
         </div>
     );
 };

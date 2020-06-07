@@ -19,3 +19,10 @@
     margin-left: 50px;
     font-weight: 600;
 }
+.basket_pay{
+    background-color: #5dc6c6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #7c7c7c;
+}

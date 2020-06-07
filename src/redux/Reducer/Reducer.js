@@ -107,7 +107,9 @@ const reducer = (state = initialState, action) => {
             return {...state, registration_response: action.status}
         case REMOVEBASKETITEM:
             const book_item = state.bookList.find((el)=>el.name ===action.bookName)
-            return {...state,basketTotal: state.basketTotal-book_item.price,basket_list: [...state.basket_list.filter((el) => el.name !== action.bookName)]}
+            const new_basket_list = [...state.basket_list]
+            new_basket_list.splice(state.basket_list.indexOf(book_item),1)
+            return {...state,basketTotal: state.basketTotal-book_item.price,basket_list: [...new_basket_list]}
         case REGISTRATION:
             switch (action.input_name) {
                 case 'email':
