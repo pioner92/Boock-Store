@@ -1,0 +1,15 @@
+.filter_language{
+    height: 20px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    border: 2px solid #E5E5E5;
+    align-items: center;
+    border-radius: 3px;
+    background: #EDCE9F;
+}
+.filter_language span{
+    font-size: 14px;
+    padding: 0px 0px 0px 10px;
+}
+

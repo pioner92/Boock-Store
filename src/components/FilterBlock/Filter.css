@@ -2,18 +2,8 @@
     padding: 0px 2%;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-.filter_langue {
-    display: flex;
+    grid-template-columns: 250px  300px;
     align-items: center;
-    border: 3px solid #B7B4B4;
-    justify-content: space-between;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    width: 70%;
 }
 
 .list_filter_items {
@@ -28,33 +18,4 @@
     color: white;
 }
 
-.filter_price {
-    font-size: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 5fr;
-    align-items: center;
-    grid-gap: 10px;
 
-}
-
-.filter_price input {
-    width: 50px;
-    padding: 2px;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: 2px solid #ccc;
-    outline: none;
-}
-
-.filter_price button {
-    border: 2px solid #ccc;
-    padding: 5px 20px;
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .1s;
-}
-
-.filter_price button:hover {
-    transform: scale(1.03);
-}

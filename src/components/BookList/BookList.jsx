@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import BookItem from "../BookItem/BookItem";
 import './BookList.css'
-import {BooksLoad} from "../../util/BooksLoad/BooksLoad";
+
+import Pagination from "../Pagination/Pagination";
+import Sorting from "../Sorting/Sorting";
+
 
 
 const BookList = (props) => {
@@ -10,34 +13,31 @@ const BookList = (props) => {
         props.setPageNumber(index)
     }
 
-    useEffect(() => {
-        BooksLoad()
-    }, [])
     return (
         <>
+            <div className='sorted_block'>
+                <Sorting/>
+            </div>
             <div className='book_list'>
                 {props.bookList.slice(props.startPage, props.endPage).map((el) => {
                     return (
-                        <BookItem author={el.author}
-                                  img={el.img} key={el.id}
-                                  addToBasket={props.addToBasket}
-                                  name={el.name}
-                                  price={el.price}
+                        <BookItem
+                            author={el.author}
+                            img={el.img} key={el.id}
+                            addToBasket={props.addToBasket}
+                            name={el.name}
+                            price={el.price}
+                            year={el.year}
+                            addToBasketListAction={props.addToBasketListAction}
                         />
                     )
                 })}
             </div>
-            <div className='pagination'>
-            {props.bookList.slice(0, Math.ceil(props.bookList.length / 9)).map((el, index) => {
-                return (
-                    <a className='page_number' onClick={() => {
-                        SetPage(index)
-                    }} href="#" key={index}>{index + 1}</a>
-                )
-            })}
-            </div>
+            <Pagination bookList={props.bookList}
+                        SetPage={SetPage}
+            />
         </>
     );
-};
+}
 
 export default BookList;

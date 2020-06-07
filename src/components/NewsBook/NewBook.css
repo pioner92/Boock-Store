@@ -1,0 +1,32 @@
+.new_book{
+    display: grid;
+    grid-template-rows: 1fr 20fr;
+    justify-self: end;
+    width: 80%;
+    height: 600px;
+    padding: 50px;
+
+
+}
+
+.new_book_items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 2px solid #E5E5E5;
+    justify-items: center;
+    border-radius: 3px;
+    padding: 0px 50px;
+    align-items: center;
+
+}
+.new_book_items img{
+    height: 200px;
+
+}
+
+.new_book_title{
+    font-size: 25px;
+    margin-left: 10px;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(10px);
+}

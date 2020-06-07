@@ -1,0 +1,9 @@
+.sorting{
+    border: 2px solid #E5E5E5;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    border-radius: 3px;
+    margin-left: 40px;
+    cursor: pointer;
+}

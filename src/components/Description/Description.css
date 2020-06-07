@@ -1,0 +1,17 @@
+.description{
+    width: 80%;
+    display: flex;
+    justify-self: end;
+    height: 400px;
+    background: rgba(236, 207, 163, 0.68);
+    padding: 50px;
+    margin-left:5%;
+}
+.description span{
+    font-family: Spectral SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
+
+}

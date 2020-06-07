@@ -1,0 +1,44 @@
+.filter_price{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-column-gap: 5px;
+}
+.price_from{
+    display: grid;
+    min-width: 120px;
+    max-width: 130px;
+    grid-template-columns: 2fr 1fr;
+}
+.price_from image{
+    background: transparent;
+    border: 2px solid #EDCE9F;
+}
+.price_before{
+    min-width: 120px;
+    max-width: 130px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.filter_price input{
+    width: 30px;
+    height: 17px;
+    background: #EDCE9F;
+    border: 2px solid #E5E5E5;
+    padding: 0px 0px 0px 5px;
+    border-radius: 3px;
+}
+.filter_price button{
+    font-size: 12px;
+    background-color: #ffc578;
+    border: 2px solid #a4a4a4;
+    border-radius: 3px;
+    padding: 0px 3px;
+    box-shadow: 2px 2px 5px #8a8a8a;
+    transition: .1s;
+}
+.filter_price button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+

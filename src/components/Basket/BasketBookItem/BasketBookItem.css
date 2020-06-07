@@ -1,0 +1,14 @@
+.basket__book_item{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 80%;
+}
+.basket__book_item img{
+    width: 100px;
+}
+.basket_delete{
+    cursor: pointer;
+}

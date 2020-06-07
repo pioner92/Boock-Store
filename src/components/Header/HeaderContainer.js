@@ -1,20 +1,18 @@
 import {connect} from 'react-redux'
 import Header from "./Header";
-import {addBasketAction} from "../../redux/Actions/Actions";
+import {registrationAction} from "../../redux/Actions/Actions";
 
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = ({basketTotal,registration_response})=>{
+
     return{
-        basketTotal: state.basketTotal
-    }
-}
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        add:(text)=>{
-            dispatch(addBasketAction(text))
-        }
+        basketTotal,
+        registration_response
+
     }
 }
 
-const HeaderContainer = connect(mapStateToProps,mapDispatchToProps)(Header)
+const HeaderContainer = connect(mapStateToProps,{
+    registrationAction,
+})(Header)
 export default HeaderContainer

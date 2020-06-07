@@ -2,9 +2,16 @@
     padding: 0px;
     margin: 0px;
     font-family: Montserrat;
+    text-decoration: none;
+}
+a{
+    color: black;
 }
 body{
     height: 100vh;
+    background-color: #EAD3B1;
+    width: 80%;
+    margin: 20px auto;
 
 }
 #root{
@@ -13,8 +20,8 @@ body{
 }
 .App{
     display: grid;
-    grid-template-rows: 50px 10fr;
-    grid-gap: 50px;
+    grid-template-rows: 70px 30px 10fr ;
+    grid-gap: 20px;
 
     /*height: 100vh;*/
 }

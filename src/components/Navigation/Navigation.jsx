@@ -1,22 +1,23 @@
 import React from 'react';
 import './Navigation.css'
+import NavItem from "./NavItem/NavItem";
 
-const Navigation = () => {
+
+const Navigation = (props) => {
     return (
         <>
             <div className='navigation'>
+                <span className="categories">Категории</span>
                 <ul>
-                    <li>Главная</li>
-                    <li>Книги</li>
-                    <li>Контакты</li>
+                {props.category.map((el,index)=>{
+                    return(
+                        <NavItem key={index}  resetPageNumber={props.resetPageNumber} Filter={props.Filter} navName={el.name}/>
+                    )
+                })}
                 </ul>
             </div>
-            <div className='wrap'>
-                <div className='rectangle'/>
-                <div className='rectangle6'/>
-            </div>
+
         </>
     );
-};
-
-export default Navigation;
+}
+export default Navigation

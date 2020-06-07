@@ -1,0 +1,28 @@
+.search{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    height: 22px;
+    grid-column-gap: 10px;
+
+}
+.search input{
+    background: #EDCE9F;
+    border-radius: 3px;
+    border: 2px solid #E5E5E5;
+    padding: 0px 0px 0px 10px;
+    outline: none;
+}
+.search button{
+    font-size: 12px;
+    background-color: #ffc578;
+    border: 2px solid #a4a4a4;
+    border-radius: 3px;
+    padding: 0px 3px;
+    box-shadow: 2px 2px 5px #8a8a8a;
+    transition: .1s;
+    outline: none;
+}
+.search button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
