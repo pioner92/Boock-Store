@@ -1,7 +1,6 @@
 import React from 'react';
 import BookItem from "../BookItem/BookItem";
 import './BookList.css'
-
 import Pagination from "../Pagination/Pagination";
 import Sorting from "../Sorting/Sorting";
 

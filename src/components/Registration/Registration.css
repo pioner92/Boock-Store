@@ -40,3 +40,13 @@
     font-size: 20px;
     text-shadow: 0px 0px 10px black;
 }
+.registration_or_login{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
+    justify-content: center;
+    justify-items: center;
+}
+.registration_or_login span{
+    cursor: pointer;
+}

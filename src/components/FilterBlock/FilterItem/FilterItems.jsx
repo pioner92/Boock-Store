@@ -3,7 +3,7 @@ import React from 'react';
 
 const FilterItems = (props) => {
 
-    const Filter = ()=>{
+    const Filter = () => {
         props.Filter(props.filterName)
         props.setIsFilter()
         props.resetPageNumber()

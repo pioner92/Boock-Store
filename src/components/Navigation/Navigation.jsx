@@ -9,14 +9,14 @@ const Navigation = (props) => {
             <div className='navigation'>
                 <span className="categories">Категории</span>
                 <ul>
-                {props.category.map((el,index)=>{
-                    return(
-                        <NavItem key={index}  resetPageNumber={props.resetPageNumber} Filter={props.Filter} navName={el.name}/>
-                    )
-                })}
+                    {props.category.map((el, index) => {
+                        return (
+                            <NavItem key={index} resetPageNumber={props.resetPageNumber} Filter={props.Filter}
+                                     navName={el.name}/>
+                        )
+                    })}
                 </ul>
             </div>
-
         </>
     );
 }

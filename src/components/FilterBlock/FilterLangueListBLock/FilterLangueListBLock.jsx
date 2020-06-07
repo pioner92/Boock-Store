@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterItems from "../FilterItem/FilterItems";
 
-const FilterLanguagesListBLock =(props) => {
+const FilterLanguagesListBLock = (props) => {
 
     return (
         <div className='list_filter_items'>
