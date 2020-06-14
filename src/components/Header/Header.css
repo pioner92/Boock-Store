@@ -43,3 +43,6 @@
 .profile_block svg:hover{
     transform: scale(1.05);
 }
+.logout{
+    cursor: pointer;
+}

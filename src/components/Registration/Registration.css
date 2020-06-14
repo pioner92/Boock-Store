@@ -50,3 +50,9 @@
 .registration_or_login span{
     cursor: pointer;
 }
+.registration_bad_status{
+    color: red;
+}
+.registration_good_status{
+    color:green;
+}

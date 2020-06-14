@@ -2,7 +2,7 @@ import {
     ADDBASKET,
     ADDTOBASKETLIST,
     BOOKLISTLOAD,
-    CATEGORYLOAD,
+    CATEGORYLOAD, ISLOGIN, LOGOUT,
     ONCHANGEPRICEBEFORE,
     ONCHANGEPRICEFROM,
     PAGINATION,
@@ -37,7 +37,9 @@ const initialState = {
         login: '',
         password: ''
     },
-    registration_response: ''
+    registration_response: '',
+    login:'',
+    isLogin:false
 }
 
 
@@ -104,7 +106,9 @@ const reducer = (state = initialState, action) => {
             sortedNew.sort((a, b) => b.year - a.year)
             return {...state, bookListFiler: sortedNew}
         case REGISTRATION_RESPONSE:
-            return {...state, registration_response: action.status}
+            return {...state, registration_response: {...action.status}}
+        case ISLOGIN : return {...state,isLogin: true,registration_inputs: {email: '',login: '',password: ''},login: action.login}
+        case LOGOUT : return {...state,isLogin: false}
         case REMOVEBASKETITEM:
             const book_item = state.bookList.find((el)=>el.name ===action.bookName)
             const new_basket_list = [...state.basket_list]

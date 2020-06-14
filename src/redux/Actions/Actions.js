@@ -1,6 +1,6 @@
 import {
     ADDBASKET, ADDTOBASKETLIST,
-    BOOKLISTLOAD, CATEGORYLOAD,
+    BOOKLISTLOAD, CATEGORYLOAD, ISLOGIN, LOGOUT,
     ONCHANGEPRICEBEFORE,
     ONCHANGEPRICEFROM,
     PAGINATION, REGISTRATION, REGISTRATION_RESPONSE, REMOVEBASKETITEM,
@@ -154,16 +154,53 @@ export const registrationStatusAction =(status)=>{
         status
     }
 }
+export const isLoginAction = (login)=>{
+    return {
+        type:ISLOGIN,
+        login
+    }
+}
+export const logOutAction = ()=>{
+    return {
+        type:LOGOUT
+    }
+}
+
+export  const PostLoginFieldsThunkCreator = (log_data)=>{
+    return (dispatch)=>{
+        fetch('http://localhost:4000/login',{
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body:JSON.stringify(log_data)
+        }).then(async (res)=>{
+            return {msg:await res.json(),status:res.status}
+        }).then((data)=>{
+            console.log(data)
+            if(data.status===200){
+                dispatch(isLoginAction(data.msg.login))
+            }
+        })
+    }
+}
 
 export const PostRegistrationFieldsThunkCreator =(reg_data)=>{
     return (dispatch)=>{
-        fetch('http://localhost:4000/registration', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body:JSON.stringify(reg_data)
-        }).then((res)=>res.json())
-            .then((data)=>{
-                dispatch(registrationStatusAction(data.status))})
+
+            fetch('http://localhost:4000/registration', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body:JSON.stringify(reg_data)
+            }).then(async (res)=>{
+                return {msg:await res.json(),status:res.status}
+            })
+                .then((data)=>{
+                    if(data.status === 201){
+                        dispatch(isLoginAction(data.msg.login))
+                    }
+                    dispatch(registrationStatusAction({msg:data.msg.message,status:data.status}))
+                })
+                .catch((error)=>{
+                    console.log(error)})
 
     }
 }

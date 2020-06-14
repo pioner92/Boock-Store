@@ -1,6 +1,10 @@
 import {connect} from 'react-redux'
 import Registration from "./Registration";
-import {PostRegistrationFieldsThunkCreator, registrationAction} from "../../redux/Actions/Actions";
+import {
+    PostLoginFieldsThunkCreator,
+    PostRegistrationFieldsThunkCreator,
+    registrationAction
+} from "../../redux/Actions/Actions";
 
 
 const mapStateToProps = (state)=>{
@@ -9,10 +13,13 @@ const mapStateToProps = (state)=>{
         email:state.registration_inputs.email,
         login:state.registration_inputs.login,
         password:state.registration_inputs.password,
+        isLogin:state.isLogin
     }
 }
 
 export const RegistrationContainer = connect(mapStateToProps,{
     registrationAction,
-    PostRegistrationFieldsThunkCreator
+    PostRegistrationFieldsThunkCreator,
+    PostLoginFieldsThunkCreator
+
 })(Registration)
